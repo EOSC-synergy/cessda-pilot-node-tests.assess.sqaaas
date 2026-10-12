@@ -15,48 +15,48 @@ sqa_criteria:
     repos:
       github.com/cessda/cessda-pilot-node-tests git:
         commands:
-        - /usr/bin/env sh .sqa/script.gamboge_witty_dhole.sh
-        container: qc.acc_echelon_harmonious_sphinx
+        - /usr/bin/env sh .sqa/script.incarnadine_nurturing_porpoise.sh
+        container: qc.acc_thistle_organized_quoll
   QC.Doc:
     repos:
       github.com/cessda/cessda-pilot-node-tests find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.lagoon_humble_stork.sh
-        container: qc.doc_turquoise_melancholy_okapi
+        - /usr/bin/env sh .sqa/script.periwinkle_mischievous_warthog.sh
+        container: qc.doc_slate_inspired_badger
       github.com/cessda/cessda-pilot-node-tests git:
         commands:
-        - /usr/bin/env sh .sqa/script.ginger_visionary_donkey.sh
-        container: qc.doc_daffodil_witty_crow
+        - /usr/bin/env sh .sqa/script.persimmon_diligent_nymph.sh
+        container: qc.doc_bone_philosophical_armadillo
       github.com/cessda/cessda-pilot-node-tests markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.hunter_reckless_reindeer.sh
-        container: qc.doc_horizon_studious_panda
+        - /usr/bin/env sh .sqa/script.claret_determined_crow.sh
+        container: qc.doc_pineapple_helpful_viper
   QC.Lic:
     repos:
       github.com/cessda/cessda-pilot-node-tests licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.rose_mature_giraffe.sh
-        container: qc.lic_burgundy_helpful_finch
+        - /usr/bin/env sh .sqa/script.ice_nervous_hare.sh
+        container: qc.lic_thunder_frugal_stingray
   QC.Met:
     repos:
       github.com/cessda/cessda-pilot-node-tests cff-converter-python:
         commands:
-        - /usr/bin/env sh .sqa/script.tide_friendly_macaw.sh
-        container: qc.met_rosewater_protective_tarantula
+        - /usr/bin/env sh .sqa/script.ebony_nurturing_pangolin.sh
+        container: qc.met_ebony_polite_spren
   QC.Sty:
     repos:
       github.com/cessda/cessda-pilot-node-tests checkstyle:
         commands:
-        - /usr/bin/env sh .sqa/script.raven_sympathetic_orca.sh
-        container: qc.sty_fern_spontaneous_ocelot
+        - /usr/bin/env sh .sqa/script.ivory_carefree_ostrich.sh
+        container: qc.sty_mulberry_tactful_falcon
       github.com/cessda/cessda-pilot-node-tests jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.sage_brilliant_dugong.sh
-        container: qc.sty_incarnadine_carefree_heron
+        - /usr/bin/env sh .sqa/script.cherry_peaceful_goat.sh
+        container: qc.sty_banana_pensive_gazelle
   QC.Ver:
     repos:
       github.com/cessda/cessda-pilot-node-tests get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.butter_eccentric_spren.sh
-        container: qc.ver_thistle_rustic_wolverine
+        - /usr/bin/env sh .sqa/script.coral_rational_tapir.sh
+        container: qc.ver_viridian_harmonious_capybara
 timeout: 5400
