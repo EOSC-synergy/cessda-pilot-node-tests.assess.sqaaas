@@ -1,0 +1,62 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/cessda/cessda-pilot-node-tests:
+      branch: main
+      repo: https://github.com/cessda/cessda-pilot-node-tests
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gamboge_witty_dhole.sh
+        container: qc.acc_echelon_harmonious_sphinx
+  QC.Doc:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.lagoon_humble_stork.sh
+        container: qc.doc_turquoise_melancholy_okapi
+      github.com/cessda/cessda-pilot-node-tests git:
+        commands:
+        - /usr/bin/env sh .sqa/script.ginger_visionary_donkey.sh
+        container: qc.doc_daffodil_witty_crow
+      github.com/cessda/cessda-pilot-node-tests markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.hunter_reckless_reindeer.sh
+        container: qc.doc_horizon_studious_panda
+  QC.Lic:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.rose_mature_giraffe.sh
+        container: qc.lic_burgundy_helpful_finch
+  QC.Met:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests cff-converter-python:
+        commands:
+        - /usr/bin/env sh .sqa/script.tide_friendly_macaw.sh
+        container: qc.met_rosewater_protective_tarantula
+  QC.Sty:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests checkstyle:
+        commands:
+        - /usr/bin/env sh .sqa/script.raven_sympathetic_orca.sh
+        container: qc.sty_fern_spontaneous_ocelot
+      github.com/cessda/cessda-pilot-node-tests jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.sage_brilliant_dugong.sh
+        container: qc.sty_incarnadine_carefree_heron
+  QC.Ver:
+    repos:
+      github.com/cessda/cessda-pilot-node-tests get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.butter_eccentric_spren.sh
+        container: qc.ver_thistle_rustic_wolverine
+timeout: 5400
